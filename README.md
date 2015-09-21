@@ -19,4 +19,4 @@ print(gitpath.abspath('setup.py'))
 ```
 
 Will give you:
-`/home/maxnoe/gitpath/setup.py`
+`/home/maxnoe/python-gitpath/setup.py`
