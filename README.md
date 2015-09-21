@@ -5,10 +5,10 @@ inside git repos easier.
 
 ## path handling
 
-`repository_root` returns the absolute path of the repository root
+`gitpath.root()` returns the absolute path of the repository root
 directory
 
-`abspath` returns an absolute path for a path given relative to the
+`gitpath.abspath(_rel_path_)` returns an absolute path for a path given relative to the
 root directory,
 so assuming, this repo resites in `/home/maxnoe/python-gitpath`:
 
