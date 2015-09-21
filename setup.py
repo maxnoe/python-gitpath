@@ -1,0 +1,12 @@
+from setuptools import setup
+
+setup(
+    name='gitutils',
+    version='0.1',
+    description='some helper functions for working inside git repos',
+    url='http://github.com/maxnoe/gitutils',
+    author='Maximilian Nöthe',
+    author_email='maximilian.noethe@tu-dortmund.de',
+    license='MIT',
+    packages=['gitutils'],
+)
