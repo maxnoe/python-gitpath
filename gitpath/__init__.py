@@ -1,4 +1,4 @@
-from subprocess import check_output
+from subprocess import check_output, CalledProcessError
 from functools import lru_cache
 import os.path
 
@@ -6,7 +6,10 @@ import os.path
 @lru_cache(maxsize=1)
 def root():
     ''' returns the absolute path of the repository root '''
-    base = check_output('git rev-parse --show-toplevel', shell=True)
+    try:
+        base = check_output('git rev-parse --show-toplevel', shell=True)
+    except CalledProcessError:
+        raise IOError('Current working directory is not a git repository')
     return base.decode('utf-8').strip()
 
 
