@@ -7,7 +7,7 @@ import os.path
 def root():
     ''' returns the absolute path of the repository root '''
     try:
-        base = check_output('git rev-parse --show-toplevel', shell=True)
+        base = check_output(['git', 'rev-parse', '--show-toplevel'])
     except CalledProcessError:
         raise IOError('Current working directory is not a git repository')
     return base.decode('utf-8').strip()

@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='gitpath',
-    version='0.1',
+    version='0.2',
     description='some helper functions for working inside git repos',
     url='http://github.com/maxnoe/gitutils',
     author='Maximilian Nöthe',
